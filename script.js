@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 // const parent = React.createElement("h1", { id: "heading" }, "Namaste React");
+
 const Parent = () => (
   <h1 className="head" tabIndex="5">
     Namaste React using JSX
@@ -12,6 +13,8 @@ const Parent = () => (
 const HeadingComponent = () => (
   <div id="container">
     <Parent />
+    <Parent>1</Parent>
+    {Parent()}
     <h1>Functional Component</h1>
   </div>
 );
