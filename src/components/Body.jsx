@@ -1,26 +1,28 @@
-import { useState } from "react";
 import RestaurantCard from "./RestaurantCard";
+import { useState } from "react";
 import resList from "../utils/resList";
 
 const Body = () => {
   const [resListState, setResList] = useState(resList);
 
-  const filterTopRated = () => {
-    const filteredList = resListState.filter((res) => res.avgRating >= 4.6);
-    setResList(filteredList);
-  };
-
   return (
     <div className="body">
-      <div className="search">Search</div>
       <div className="filter">
-        <button className="filter-btn" onClick={filterTopRated}>
+        <button
+          className="filter-btn"
+          onClick={() => {
+            const filteredList = resListState.filter(
+              (res) => res.data.avgRating > 4
+            );
+            setResList(filteredList);
+          }}
+        >
           Top Rated Restaurants
         </button>
       </div>
       <div className="res-container">
         {resListState.map((restaurant) => (
-          <RestaurantCard key={restaurant.id} resData={restaurant} />
+          <RestaurantCard key={restaurant.data.id} resData={restaurant} />
         ))}
       </div>
     </div>

@@ -5,7 +5,7 @@
 }
 
 .logo {
-  width: 100px;
+  width: 200px;
 }
 
 .nav-items {
@@ -32,7 +32,6 @@
   margin: 5px;
   padding: 5px;
   width: 200px;
-  background-color: lightgray;
 }
 
 .res-card:hover {
@@ -45,6 +44,10 @@
 }
 
 .res-logo {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+}
+
+.filter-btn {
+  margin: 10px;
+  cursor: pointer;
 }
