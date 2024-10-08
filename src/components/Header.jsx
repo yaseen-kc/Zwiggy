@@ -23,7 +23,7 @@ const Header = () => {
                 : setBtnNameReact("Login");
             }}
           >
-            {btnNameReact}
+            {btnNameReact} 
           </button>
         </ul>
       </div>
