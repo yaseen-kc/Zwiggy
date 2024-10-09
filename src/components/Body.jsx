@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 import resList from "../utils/resList";
 
 const Body = () => {
-  const [resListState, setResList] = useState(resList);
-  const [searchText, setSearchText] = useState("");
+  const [resListState, setResListState] = useState(resList);
   const [filteredRestaurant, SetFilteredRestaurant] = useState(resList);
+
+  const [searchText, setSearchText] = useState("");
 
   // useEffect(() => {
   //   console.log("useEffect triggered");
@@ -19,6 +20,10 @@ const Body = () => {
   //   const json = await data.json();
   //   setResList(json?.data?.cards[1]?.data?.data?.cards);
   // };
+
+  useEffect(() => {
+    console.log("useEffect");
+  }, []);
 
   return (
     <div className="body">
@@ -49,7 +54,7 @@ const Body = () => {
             const filteredList = resListState.filter(
               (res) => res.data.avgRating > 4
             );
-            setResList(filteredList);
+            SetFilteredRestaurant(filteredList);
           }}
         >
           Top Rated Restaurants
