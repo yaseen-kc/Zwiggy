@@ -14,9 +14,6 @@ const RestaurantMenu = () => {
 
   const fetchMenu = async () => {
     const data = await fetch(MENU_API + resId);
-    // const data = await fetch(
-    //   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=9.968199&lng=76.3182346&restaurantId=704921&catalog_qa=undefined&submitAction=ENTER"
-    // );
     const json = await data.json();
     setResInfo(json.data);
   };
@@ -56,6 +53,7 @@ const RestaurantMenu = () => {
           <li key={item.card.info.id}>
             {item.card.info.name} - {" Rs."}
             {item.card.info.price / 100 || item.card.info.defaultPrice / 100}
+            <p>{item.card.info.description}</p>
           </li>
         ))}
       </ul>
