@@ -3,11 +3,18 @@ import React from "react";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      count: 1,
+      countOne: 2,
+    };
   }
   render() {
     const { name } = this.props;
+    const { count, countOne } = this.state;
     return (
       <div>
+        <h1>Count:{count}</h1>
+        <h1>Count:{countOne}</h1>
         <h1>About Us Page(Class Based)</h1>
         <h2>Component {name}</h2>
         <p>
