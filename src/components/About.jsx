@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div>
       <h1>About Page</h1>
-      <User name={"yaseen"} />
+      {/* <User name={"yaseen"} /> */}
       <UserClass name={"yaseen"} />
     </div>
   );
