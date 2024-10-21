@@ -2,7 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import resList from "../utils/resList";
 import { Link } from "react-router-dom";
-
+import useOnline from "../utils/useOnline";
 const Body = () => {
   const [resListState, setResListState] = useState(resList);
   const [filteredRestaurant, SetFilteredRestaurant] = useState(resList);
@@ -13,6 +13,10 @@ const Body = () => {
     console.log("useEffect");
   }, []);
 
+  let isOnline = useOnline();
+  if (!isOnline) {
+    return <h1>Offline</h1>;
+  }
   return (
     <div className="body">
       <div className="filter">
