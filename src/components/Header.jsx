@@ -1,10 +1,13 @@
 import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
+  const [isLoggedIn, SetIsLoggedIn] = useState(false);
 
+  let isOnline = useOnline;
   return (
     <div className="header">
       <div className="logo-container">
