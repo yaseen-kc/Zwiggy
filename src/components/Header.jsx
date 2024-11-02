@@ -5,9 +5,9 @@ import useOnline from "../utils/useOnline";
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
-  const [isLoggedIn, SetIsLoggedIn] = useState(false);
+  // const [isLoggedIn, SetIsLoggedIn] = useState(false);
 
-  let isOnline = useOnline;
+  // let isOnline = useOnline;
   return (
     <div className="header">
       <div className="logo-container">
@@ -23,6 +23,9 @@ const Header = () => {
           </li>
           <li>
             <Link to="/contact">Contact</Link>
+          </li>
+          <li>
+            <Link to="/instamart">Instamart</Link>
           </li>
           <li>Cart</li>
           <button
