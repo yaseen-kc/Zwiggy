@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { WithPromotedLabel } from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import resList from "../utils/resList";
 import { Link } from "react-router-dom";
@@ -9,9 +9,9 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  useEffect(() => {
-    console.log("useEffect");
-  }, []);
+  const RestaurantCardPromoted = WithPromotedLabel(RestaurantCard);
+
+  console.log(RestaurantCardPromoted);
 
   let isOnline = useOnline();
   if (!isOnline) {
@@ -61,7 +61,11 @@ const Body = () => {
             key={restaurant?.data?.id}
             to={"/restaurant/" + restaurant.data.id}
           >
-            <RestaurantCard resData={restaurant} />
+            {restaurant.data.promoted ? (
+              <RestaurantCardPromoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
