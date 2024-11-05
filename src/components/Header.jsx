@@ -10,11 +10,8 @@ const Header = () => {
   // let isOnline = useOnline;
   return (
     <div className="flex justify-between bg-pink-100 shadow-lg">
-      <div className="logo-container flex items-center">
-        <img className="w-16 m-2" src={LOGO_URL} alt="Image not found" />
-        <h1 className="text-xl font-extrabold">
-          <Link to="/">Zwiggy</Link>
-        </h1>
+      <div className="logo-container">
+        <img className="w-32" src={LOGO_URL} alt="Image not found" />
       </div>
       <div className="flex items-center">
         <ul className="flex p-4 m-4">
