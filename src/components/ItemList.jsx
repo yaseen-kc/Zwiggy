@@ -1,7 +1,6 @@
 import { CDN_URL } from "../utils/constants";
 
 const ItemList = ({ items }) => {
-  console.log(items);
   return (
     <div>
       {items.map((item) => (
@@ -19,18 +18,25 @@ const ItemList = ({ items }) => {
                   ? item.card.info.price / 100
                   : item.card.info.defaultPrice / 100}
               </span>
+              <br />
+              <span className="text-green-600 text-xs">
+                ★{item.card.info.ratings.aggregatedRating.rating}(
+              </span>
+              <span className="text-xs">
+                {item.card.info.ratings.aggregatedRating.ratingCountV2})
+              </span>
             </div>
             <p className="text-xs font-thin">{item.card.info.description}</p>
           </div>
           <div className="w-3/12 p-4">
             <div className="absolute">
-              <button className="p-2 mx-10 my-28 rounded-md bg-gray-800 text-white shadow-lg">
+              <button className="p-2 mx-10 my-32 rounded-md bg-gray-800 text-white shadow-lg">
                 Add +
               </button>
             </div>
             <img
               src={CDN_URL + item.card.info.imageId}
-              className="w-full rounded-md"
+              className="rounded-md w-[250px] h-[150px]"
             />
           </div>
         </div>
