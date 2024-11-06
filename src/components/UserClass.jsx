@@ -9,7 +9,6 @@ class UserClass extends React.Component {
         userLocation: "dummyLocation",
       },
     };
-    console.log("Child Constructor");
   }
 
   async componentDidMount() {
@@ -18,16 +17,18 @@ class UserClass extends React.Component {
     this.setState({
       userInfo: json,
     });
-    console.log("Child componentDidMount");
   }
 
   render() {
-    console.log("Child render");
     return (
-      <div>
-        <h2>Profile Class Component</h2>
-        <img src={this.state.userInfo.avatar_url} alt="Not Found" />
-        <h2>{this.state.userInfo.name}</h2>
+      <div className="text-left">
+        <h2 className="">Name: {this.state.userInfo.name}</h2>
+        <span>Bio: {this.state.userInfo.bio}</span>
+        <img
+          className="rounded-md"
+          src={this.state.userInfo.avatar_url}
+          alt="Not Found"
+        />
       </div>
     );
   }
