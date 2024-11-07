@@ -11,12 +11,14 @@ class About extends React.Component {
 
   render() {
     return (
-      <div className="flex flex-col items-center p-6 bg-gray-50 min-h-screen">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">About Page</h1>
+      <div className="flex flex-col items-center bg-gray-50 min-h-screen">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4 pt-4">
+          About Page
+        </h1>
         <UserContext.Consumer>
           {({ loggedInUser }) => <h1 className="pb-4">{loggedInUser}</h1>}
         </UserContext.Consumer>
-        <div className="w-full max-w-md bg-white shadow-md rounded-lg p-4">
+        <div className="max-w-md bg-white shadow-md rounded-lg p-4">
           <UserClass name={"Name 1"} />
         </div>
       </div>

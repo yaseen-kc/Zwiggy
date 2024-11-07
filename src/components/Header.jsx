@@ -28,9 +28,6 @@ const Header = () => {
           <li className="px-4 text-lg font-semibold">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="px-4 text-lg font-semibold">
-            <Link to="/instamart">Instamart</Link>
-          </li>
           <li className="px-4 text-lg font-semibold">Cart</li>
           <button
             className="px-4 text-lg font-semibold"
