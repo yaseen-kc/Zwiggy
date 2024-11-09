@@ -5,8 +5,8 @@ import { addItem } from "../utils/redux/cartSlice";
 const ItemList = ({ items }) => {
   const dispatch = useDispatch();
 
-  const handleAddItem = () => {
-    dispatch(addItem(items));
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
   };
   return (
     <div>
