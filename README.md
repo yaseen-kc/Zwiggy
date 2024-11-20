@@ -1,102 +1,108 @@
-# 🍔 Zwiggy | React Hands-on Experience Project
+# Zwiggy 🍔🍕🥗
 
-This project is a **Zwiggy** built with **React** to replicate the core features of popular food delivery platforms 🍕🍔. The primary goal was to gain hands-on experience with advanced React concepts while creating a fully functional, real-world application.
+Zwiggy is a modern web application designed for browsing restaurants, viewing menus, and managing food orders with a user-friendly interface. Built with React, Redux, and Tailwind CSS, it allows users to explore restaurant offerings, manage their cart, and check out with ease. Perfect for foodies and developers alike!
 
-## 📋 Table of Contents
+## Features ✨
 
-- [Project Overview](#project-overview)
-- [Technologies Used](#technologies-used)
-- [Key Features](#key-features)
-- [Getting Started](#getting-started)
+- 🍽️ Browse through a variety of restaurants and their menus.
+- 🍔 View restaurant details, categories, and item listings.
+- 🛒 Add items to your cart and manage cart contents.
+- 🛑 Handle errors gracefully with error boundaries.
+- 🔄 Mobile-first, responsive design powered by Tailwind CSS.
+- 🔄 State management using Redux for cart and app-wide state.
+- 🧪 Unit tests for critical components to ensure stability.
 
-## 📝 Project Overview
+## Installation Instructions ⚡
 
-The **Zwiggy** part of **Namaste React** course which mimics core functionalities of leading food delivery services, allowing users to browse restaurants, place orders, track deliveries, make secure payments, and more.
+To get started with Zwiggy, follow these steps:
 
-### Key Features:
+### Prerequisites 🛠️
 
-- 🍽️ **Food Ordering**: Browse food items, add them to your cart, and place orders.
-- 🛍️ **Restaurant Listings**: Explore restaurants based on location, ratings, and cuisine.
-- 👤 **User Profiles**: Manage user accounts and personal information.
-- ⭐ **Ratings & Reviews**: Rate restaurants and dishes after ordering.
+Make sure you have `node` and `npm` (or `yarn`) installed. You can download them from [here](https://nodejs.org/).
 
-## 🛠️ Technologies Used
-
-- **Frontend**: React (with hooks, context API, advanced state management)
-- **State Management**: Recoil / Redux
-- **UI Framework**: TailwindCSS / Custom CSS
-- **Routing**: React Router
-- **Deployment**: AWS
-
-## 💭 Topics Covered
-
-1. **JSX, React components**
-2. **Class-based vs Functional components**
-3. **React app building**
-4. **props/state**
-5. **function mapping**
-6. **File structure**
-7. **Import/export**
-8. **React Hooks (useState)**
-9. **useEffect**
-10. **Conditional Rendering**
-11. **API usage**
-12. **Swiggy API Issue Resolved**
-13. **CORS Plugin Issue solved**
-14. **React Router**
-15. **Dynamic Routing**
-16. **Outlet Component**
-17. **Class-based components**
-18. **Lifecycle methods**
-19. **Custom Hooks**
-20. **Optimization**
-21. **Suspense Component**
-22. **Tailwind CSS introduction for UI design**
-23. **Higher-Order Components**
-24. **Controlled vs Uncontrolled Components**
-25. **Redux Toolkit**
-26. **React-Redux**
-27. **Actions, Reducers**
-28. **Jest, React Testing Library**
-29. **Unit Testing principles**
-
-## 🚀 Getting Started
-
-To get started with the project locally, follow these steps:
-
-### Prerequisites
-
-Make sure you have the following installed:
-
-- **Node.js** (latest stable version)
-- **npm** (Node Package Manager)
-- **Docker** (for containerization)
-- **AWS CLI** (for deployment)
-- **Stripe/PayPal account** (for payment integration)
-
-### Setup Instructions
+### Steps 🚀
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yaseen-kc/Zwiggy.git
-   cd Zwiggy
+   git clone https://github.com/your-username/zwiggy.git
+   cd zwiggy
+
    ```
 
 2. Install dependencies:
 
    ```bash
    npm install
+
    ```
 
-3. Run the application locally:
+3. Start the development server:
 
    ```bash
    npm start
    ```
 
-4. Open your browser and go to [http://localhost:3000](http://localhost:3000).
+   Your app will now be running at `http://localhost:3000` (or another available port).
 
-NB: use any chrome extension to bypass CORS error
+## Usage Examples 📱
 
----
+Once the app is running, you can:
+
+1. 🍴 Browse a list of restaurants.
+2. 🍽️ Click on a restaurant to view its menu.
+3. 🛒 Add items to the cart from the menu.
+4. 🏷️ View the cart and proceed to checkout.
+
+The application adjusts to online/offline states, ensuring an optimal user experience regardless of connectivity.
+
+## Configuration Options ⚙️
+
+You can configure certain parts of the app by editing the following files:
+
+- **Tailwind Configuration**: Modify `tailwind.config.js` to customize utility classes and design tokens.
+- **Redux Store**: The global state is managed with Redux. You can adjust actions and states in `src/utils/redux/appStore.jsx` and `src/utils/redux/cartSlice.jsx`.
+- **API Constants**: Update API URLs or constants in `src/utils/constants.jsx` to fit your needs.
+
+## Contribution Guidelines 🤝
+
+To contribute to this project:
+
+1. 🍴 Fork the repository.
+2. 🌱 Create a new branch for your feature or fix.
+3. ✨ Make your changes and add tests (if applicable).
+4. ✅ Ensure all tests pass.
+5. 🚀 Submit a pull request with a description of your changes.
+
+Please follow the code style guidelines and include tests for any new functionality.
+
+## Testing Instructions 🧪
+
+To run the tests:
+
+1. Install dependencies (if not done already):
+
+   ```bash
+   npm install
+   ```
+
+2. Run the test suite:
+
+   ```bash
+   npm test
+   ```
+
+The app uses Jest for testing, and you can add new tests inside the `src/components/__test__` directory.
+
+## License 📜
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements / Credits 🏆
+
+- **React**: For the powerful component-based architecture that simplifies UI development.
+- **Redux**: For efficient global state management across the app.
+- **Tailwind CSS**: For enabling a fast and responsive design system with utility-first classes.
+- **Jest**: For robust testing to ensure reliability and maintainability.
+
+Special thanks to the contributors and maintainers of the libraries and frameworks used in this project. 🙏
